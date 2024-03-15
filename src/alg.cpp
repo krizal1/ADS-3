@@ -1,4 +1,5 @@
-
+// Copyright 2021 NNTU-CS
+#include <cstdint>
 
 int cbinsearch(int *arr, int size, int value) {
     int l = 0;
@@ -19,10 +20,11 @@ int cbinsearch(int *arr, int size, int value) {
                 t++;
             }
             return count;
-        } else if (arr[mid] < value)
+        } else if (arr[mid] < value) {
             l = mid + 1;
-        else
+        } else {
             r = mid - 1;
+        }
     }
     return count;
 }
